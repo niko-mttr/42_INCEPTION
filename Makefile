@@ -9,7 +9,7 @@ build:
 
 down:
 	@echo "Stopping configuration ${NAME}\n"
-	@docker compose -f ./srcs/docker-compose.yml --env-file srcs/.env down
+	@docker compose -f ./srcs/docker-compose.yml --env-file srcs/.env down --volume
 
 clean: down
 	@echo "Cleaning configuration ${NAME}\n"

@@ -1,11 +1,12 @@
 #!/bin/sh
 
+#check if mysql data directory exists
 if [ ! -d "/run/mysqld" ]; then
 	mkdir -p /run/mysqld
 	chown -R mysql:mysql /run/mysqld
 fi
 
-
+#check if mysql data directory exists -> if not create db wordpress repository
 if [ ! -d "/var/lib/mysql/$DB_NAME" ]; then
 	chown -R mysql:mysql /var/lib/mysql
 
